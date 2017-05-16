@@ -12,4 +12,9 @@ namespace CalcLibrary
 
         double Calc(int x, int y);
     }
+
+    public interface IOperationArgs : IOperation
+    {
+        double Calc(IEnumerable<int> args);
+    }
 }

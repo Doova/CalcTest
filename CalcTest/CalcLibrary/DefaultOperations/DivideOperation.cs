@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace CalcLibrary.DefaultOperations
 {
-    public class SumOperation : IOperationArgs
+    public class DivideOperation : IOperationArgs
     {
         public string Name
         {
-            get { return "sum"; }
+            get { return "Div"; }
         }
 
         public double Calc(IEnumerable<int> args)
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public double Calc(int x, int y)
         {
-            return x + y;
+            return x / y;
         }
     }
 }

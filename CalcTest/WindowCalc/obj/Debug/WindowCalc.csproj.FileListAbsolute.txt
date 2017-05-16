@@ -1,0 +1,11 @@
+D:\CalcTest\CalcTest\WindowCalc\bin\Debug\WindowCalc.exe.config
+D:\CalcTest\CalcTest\WindowCalc\obj\Debug\WindowCalc.csprojResolveAssemblyReference.cache
+D:\CalcTest\CalcTest\WindowCalc\obj\Debug\WindowCalc.Form1.resources
+D:\CalcTest\CalcTest\WindowCalc\obj\Debug\WindowCalc.Properties.Resources.resources
+D:\CalcTest\CalcTest\WindowCalc\obj\Debug\WindowCalc.csproj.GenerateResource.Cache
+D:\CalcTest\CalcTest\WindowCalc\bin\Debug\WindowCalc.exe
+D:\CalcTest\CalcTest\WindowCalc\bin\Debug\WindowCalc.pdb
+D:\CalcTest\CalcTest\WindowCalc\bin\Debug\CalcLibrary.dll
+D:\CalcTest\CalcTest\WindowCalc\bin\Debug\CalcLibrary.pdb
+D:\CalcTest\CalcTest\WindowCalc\obj\Debug\WindowCalc.exe
+D:\CalcTest\CalcTest\WindowCalc\obj\Debug\WindowCalc.pdb

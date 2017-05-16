@@ -1,0 +1,7 @@
+D:\CalcTest\CalcTest\ExelOperations\bin\Debug\ExelOperations.dll
+D:\CalcTest\CalcTest\ExelOperations\bin\Debug\ExelOperations.pdb
+D:\CalcTest\CalcTest\ExelOperations\bin\Debug\CalcLibrary.dll
+D:\CalcTest\CalcTest\ExelOperations\bin\Debug\CalcLibrary.pdb
+D:\CalcTest\CalcTest\ExelOperations\obj\Debug\ExelOperations.csprojResolveAssemblyReference.cache
+D:\CalcTest\CalcTest\ExelOperations\obj\Debug\ExelOperations.dll
+D:\CalcTest\CalcTest\ExelOperations\obj\Debug\ExelOperations.pdb

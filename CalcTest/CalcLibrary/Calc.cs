@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -11,11 +12,21 @@ namespace CalcLibrary
     {
         public Calc()
         {
-            operations = new List<IOperation>();
+            Operations = new List<IOperation>();
+
 
             var assm = Assembly.GetAssembly(typeof(IOperation));
+            var types = assm.GetTypes().ToList();
 
-            var types = assm.GetTypes();
+            //найти длл рядом с exe
+            var dlls = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.dll");
+            foreach (var dll in dlls)
+            {
+                //Загрузить библиотеку как сборку 
+                assm = Assembly.LoadFrom(dll);
+                //Добавить типы
+                types.AddRange(assm.GetTypes());
+            }
 
             foreach (var type in types)
             {
@@ -25,7 +36,7 @@ namespace CalcLibrary
                     var oper = Activator.CreateInstance(type) as IOperation;
                     if (oper != null)
                     {
-                        operations.Add(oper);
+                        Operations.Add(oper);
                     }
                 }
             }
@@ -33,7 +44,7 @@ namespace CalcLibrary
         /// <summary>
         /// Список доступных операций
         /// </summary>
-        private IList<IOperation> operations { get; set; }
+       public IList<IOperation> Operations { get; private set; }
 
         /// <summary>
         /// Выполнить операцию
@@ -44,7 +55,7 @@ namespace CalcLibrary
         public object Execute(string operation, object[] args)
         {
             // находим операцию в списке доступных
-            var oper = operations.FirstOrDefault(it => it.Name == operation);
+            var oper = Operations.FirstOrDefault(it => it.Name == operation);
 
             // если не нашли - возращаем ошибку
             if (oper == null)
@@ -54,14 +65,23 @@ namespace CalcLibrary
 
             // если нашли
             // разибраем аргрументы
-            int x;
-            int.TryParse(args[0].ToString(), out x);
+            var result = 0;
 
-            int y;
-            int.TryParse(args[1].ToString(), out y);
+            var operArgs = oper as IOperationArgs;
+            if (operArgs != null)
+            {
+                result = operArgs.Calc(args.Select(it => int.Parse(it.ToString())));
+            }
+            else
+            {
+                int x;
+                int.TryParse(args[0].ToString(), out x);
 
-            // вызываем саму операцию
-            var result = oper.Calc(x, y);
+                int y;
+                int.TryParse(args[1].ToString(), out y);
+
+                result = oper.Calc(x, y);
+            }
 
             // возвращаем результат
             return result;

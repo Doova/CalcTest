@@ -1,0 +1,10 @@
+D:\CalcTest\CalcTest\CalcTest\bin\Debug\CalcTest.dll
+D:\CalcTest\CalcTest\CalcTest\bin\Debug\CalcTest.pdb
+D:\CalcTest\CalcTest\CalcTest\bin\Debug\CalcLibrary.dll
+D:\CalcTest\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\CalcTest\CalcTest\CalcTest\bin\Debug\CalcLibrary.pdb
+D:\CalcTest\CalcTest\CalcTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\CalcTest\CalcTest\CalcTest\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\CalcTest\CalcTest\CalcTest\obj\Debug\CalcTest.csprojResolveAssemblyReference.cache
+D:\CalcTest\CalcTest\CalcTest\obj\Debug\CalcTest.dll
+D:\CalcTest\CalcTest\CalcTest\obj\Debug\CalcTest.pdb

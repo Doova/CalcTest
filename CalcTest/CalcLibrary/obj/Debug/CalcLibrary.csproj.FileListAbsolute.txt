@@ -1,0 +1,5 @@
+D:\CalcTest\CalcTest\CalcLibrary\bin\Debug\CalcLibrary.dll
+D:\CalcTest\CalcTest\CalcLibrary\bin\Debug\CalcLibrary.pdb
+D:\CalcTest\CalcTest\CalcLibrary\obj\Debug\CalcLibrary.csprojResolveAssemblyReference.cache
+D:\CalcTest\CalcTest\CalcLibrary\obj\Debug\CalcLibrary.dll
+D:\CalcTest\CalcTest\CalcLibrary\obj\Debug\CalcLibrary.pdb
