@@ -7,8 +7,8 @@
     <ProjectGuid>{003B3DCE-7427-4A66-A438-2C76E30BC841}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowCalc</RootNamespace>
-    <AssemblyName>WindowCalc</AssemblyName>
+    <RootNamespace>SuperCalc</RootNamespace>
+    <AssemblyName>SuperCalc</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CalcLibrary\CalcLibrary.csproj">
-      <Project>{45010e79-6532-4f6b-b833-0bd55cbe1800}</Project>
+      <Project>{8bb85ab7-d53c-40be-be6b-4f4b6b6c7f1f}</Project>
       <Name>CalcLibrary</Name>
     </ProjectReference>
   </ItemGroup>

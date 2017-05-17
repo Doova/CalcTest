@@ -18,6 +18,7 @@ namespace CalcTest
             var result3 = test.Sum(1, 4);
             var result4 = test.Sum(1, 5);
 
+
             //Assert
             Assert.AreEqual(result, 3);
             Assert.AreEqual(result2, 4);

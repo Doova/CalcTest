@@ -13,7 +13,7 @@ namespace ExelOperations
 
         public double Calc(int x, int y)
         {
-            throw new NotImplementedException();
+            return x * x + y * y + x - y;
         }
     }
 }

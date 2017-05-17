@@ -28,10 +28,13 @@ namespace CalcLibrary
                 types.AddRange(assm.GetTypes());
             }
 
-            foreach (var type in types)
+            var ioper = typeof(IOperation);
+            foreach ( var type in types)
             {
+                if (type.IsInterface)
+                    continue;
                 var interfaces = type.GetInterfaces();
-                if (interfaces.Contains(typeof(IOperation)))
+                if (interfaces.Contains(ioper))
                 {
                     var oper = Activator.CreateInstance(type) as IOperation;
                     if (oper != null)
@@ -52,6 +55,7 @@ namespace CalcLibrary
         /// <param name="operation">Название операции</param>
         /// <param name="args">Аргументы операции</param>
         /// <returns></returns>
+        [Obsolete]
         public object Execute(string operation, object[] args)
         {
             // находим операцию в списке доступных
@@ -65,7 +69,42 @@ namespace CalcLibrary
 
             // если нашли
             // разибраем аргрументы
-            var result = 0;
+            double result = 0;
+
+            var operArgs = oper as IOperationArgs;
+            if (operArgs != null)
+            {
+                result = operArgs.Calc(args.Select(it => int.Parse(it.ToString())));
+            }
+            else
+            {
+                int x;
+                int.TryParse(args[0].ToString(), out x);
+
+                int y;
+                int.TryParse(args[1].ToString(), out y);
+
+                result = oper.Calc(x, y);
+            }
+
+            // возвращаем результат
+            return result;
+        }
+
+        public object ExecuteNew(string operation, object[] args)
+        { 
+            // находим операцию в списке доступных
+            var oper = Operations.FirstOrDefault(it => it.Name == operation);
+
+            // если не нашли - возращаем ошибку
+            if (oper == null)
+            {
+                return "Error";
+            }
+
+            // если нашли
+            // разибраем аргрументы
+            double result = 0;
 
             var operArgs = oper as IOperationArgs;
             if (operArgs != null)
@@ -93,7 +132,7 @@ namespace CalcLibrary
             var r = Execute("sum", new object[] { x, y });
             return int.Parse(r.ToString());
         }
-
+        [Obsolete("Не используйте")]
         public double Divide(int x, int y)
         {
             var r = Execute("divide", new object[] { x, y });

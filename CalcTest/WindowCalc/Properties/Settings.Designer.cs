@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowCalc.Properties
+namespace SuperCalc.Properties
 {
 
 
